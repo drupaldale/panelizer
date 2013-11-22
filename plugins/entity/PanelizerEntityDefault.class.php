@@ -844,6 +844,8 @@ abstract class PanelizerEntityDefault implements PanelizerEntityInterface {
           else {
             if (!empty($panelizer_defaults[$entity->panelizer[$view_mode]->name])) {
               $entity->panelizer[$view_mode]->display = $panelizer_defaults[$entity->panelizer[$view_mode]->name]->display;
+              // Add Context
+              $entity->panelizer[$view_mode]->contexts = $panelizer_defaults[$entity->panelizer[$view_mode]->name]->contexts;
             }
           }
         }
